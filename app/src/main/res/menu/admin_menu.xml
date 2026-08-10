@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/admin_add_timetable"
+        android:title="@string/add_timetable"
+        app:showAsAction="never"/>
+    <item android:id="@+id/admin_add_faculty_sem"
+        android:title="@string/add_faculty"
+        app:showAsAction="never"/>
+    <item android:id="@+id/admin_logout"
+        android:title="@string/menu_logout"
+        app:showAsAction="never"/>
+</menu>

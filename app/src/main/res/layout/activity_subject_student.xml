@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SubjectStudentActivity">
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:contentDescription="@string/image_description"
+        android:scaleType="fitXY"
+        android:src="@drawable/profile_vector"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/subject"
+        android:textColor="@color/white_text"
+        android:textSize="32sp"
+        android:fontFamily="@font/titillium_web_bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView8" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView8">
+
+        <TextView
+            android:id="@+id/dep_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/titillium_web_regular"
+            android:textColor="@color/black_text"
+            android:text="@string/department"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="5dp"
+            android:layout_alignParentTop="true"/>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider1"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            app:dividerThickness="1dp"
+            android:layout_toEndOf="@+id/dep_textview"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"/>
+
+        <TextView
+            android:id="@+id/sem_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@string/sem"
+            android:fontFamily="@font/titillium_web_regular"
+            android:textColor="@color/black_text"
+            android:layout_toEndOf="@+id/divider1"
+            android:layout_alignParentTop="true"/>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider2"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/sem_textview"
+            app:dividerThickness="1dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@string/subject"
+            android:fontFamily="@font/titillium_web_regular"
+            android:textColor="@color/black_text"
+            android:layout_toEndOf="@+id/divider2"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"/>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/horizontal_divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            app:dividerThickness="1dp"
+            android:layout_below="@+id/dep_textview"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/horizontal_divider"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/divider1">
+
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/rv_dep_subject"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentTop="true"-->
+<!--                android:layout_alignParentStart="true"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:layout_alignParentEnd="true"/>-->
+
+            <TextView
+                android:id="@+id/tv_dep"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:textColor="@color/black_text"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:fontFamily="@font/titillium_web_regular"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/horizontal_divider"
+            android:layout_toEndOf="@id/divider1"
+            android:layout_alignEnd="@+id/divider2">
+
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/rv_sem_subject"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentTop="true"-->
+<!--                android:layout_alignParentStart="true"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:layout_alignParentEnd="true"/>-->
+
+            <TextView
+                android:id="@+id/tv_sem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:textColor="@color/black_text"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:fontFamily="@font/titillium_web_regular"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/horizontal_divider"
+            android:layout_toEndOf="@id/divider2"
+            android:layout_alignParentEnd="true">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_subject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

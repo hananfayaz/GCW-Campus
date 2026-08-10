@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="22dp"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="15dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_subject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_toStartOf="@+id/txt_day_student"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/titillium_web_bold"
+                android:gravity="start"
+                android:text="@string/subject"
+                android:textAlignment="gravity"
+                android:textColor="@color/black_text"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txt_day_student"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/txt_subject"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/titillium_web_regular"
+                android:gravity="center"
+                android:text="@string/select_day"
+                android:textColor="@color/black_text"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txt_start_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/start_time"
+                android:textSize="16sp"
+                android:textColor="@color/black_text"
+                android:fontFamily="@font/titillium_web_light"
+                android:layout_below="@+id/txt_subject"
+                android:layout_alignStart="@+id/txt_subject"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/hyphen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hyphen"
+                android:textSize="16sp"
+                android:textColor="@color/black_text"
+                android:fontFamily="@font/titillium_web_light"
+                android:layout_below="@+id/txt_subject"
+                android:layout_toEndOf="@id/txt_start_time"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/txt_end_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/end_time"
+                android:textSize="16sp"
+                android:textColor="@color/black_text"
+                android:fontFamily="@font/titillium_web_light"
+                android:layout_below="@+id/txt_subject"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/hyphen"/>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:dividerThickness="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/txt_start_time"
+                app:dividerColor="@color/grey_color"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"/>
+
+            <TextView
+                android:id="@+id/txt_faculty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/faculty"
+                android:layout_alignParentBottom="true"
+                android:textSize="16sp"
+                android:textColor="@color/black_text"
+                android:fontFamily="@font/titillium_web_regular"
+                android:layout_below="@+id/divider"
+                android:layout_toStartOf="@+id/txt_vw_period"
+                android:layout_marginTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_alignParentStart="true"/>
+
+            <TextView
+                android:id="@+id/txt_vw_period"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/period_"
+                android:textSize="16sp"
+                android:layout_alignBottom="@+id/txt_period"
+                android:layout_toStartOf="@+id/txt_period"
+                android:textColor="@color/black_text"
+                android:paddingBottom="10dp"
+                android:fontFamily="@font/titillium_web_light"
+                android:layout_below="@+id/divider"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"/>
+
+            <TextView
+                android:id="@+id/txt_period"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/period"
+                android:textSize="16sp"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/black_text"
+                android:paddingBottom="10dp"
+                android:fontFamily="@font/titillium_web_light"
+                android:layout_below="@+id/divider"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

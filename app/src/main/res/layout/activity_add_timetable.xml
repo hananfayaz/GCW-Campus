@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.AddTimetableActivity"
+    android:background="@color/main_heading">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/titillium_web_bold"
+                android:text="@string/add_timetable"
+                android:textColor="@color/white_text"
+                android:textSize="32sp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/titillium_web_regular"
+                android:text="@string/select_semester"
+                android:textColor="@color/white_text"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/spn_sem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/spinner"
+                android:entries="@array/semesters"
+                android:spinnerMode="dropdown"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/titillium_web_regular"
+                android:text="@string/enter_subject_to_teach"
+                android:textColor="@color/white_text"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/edt_txt_subject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints="none"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/edit_text"
+                android:hint="@string/enter_subject"
+                android:inputType="textCapSentences"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"/>
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/titillium_web_regular"
+                android:text="@string/select_period_start_time"
+                android:textColor="@color/white_text"
+                android:textSize="20sp" />
+
+            <TimePicker
+                android:id="@+id/tp_start_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:timePickerMode="spinner"
+                android:layout_marginStart="5dp"/>
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/titillium_web_regular"
+                android:text="@string/select_period_end_time"
+                android:textColor="@color/white_text"
+                android:textSize="20sp" />
+
+            <TimePicker
+                android:id="@+id/tp_end_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:timePickerMode="spinner"
+                android:layout_marginStart="5dp"/>
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/titillium_web_regular"
+                android:text="@string/enter_period_no"
+                android:textColor="@color/white_text"
+                android:textSize="20sp"
+                android:layout_marginStart="5dp"/>
+
+            <Spinner
+                android:id="@+id/spn_period"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/spinner"
+                android:entries="@array/semesters"
+                android:spinnerMode="dropdown"
+                android:gravity="center"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/titillium_web_regular"
+                android:text="@string/select_department"
+                android:textColor="@color/white_text"
+                android:textSize="20sp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="20dp"/>
+
+            <Spinner
+                android:id="@+id/spn_department"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/spinner"
+                android:gravity="center"
+                android:entries="@array/departments"
+                android:spinnerMode="dropdown"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/txt_faculty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/add_faculty_to_teach"
+                android:textColor="@color/white_text"
+                android:textSize="20sp"
+                android:layout_marginStart="5dp"/>
+
+            <Spinner
+                android:id="@+id/spn_faculty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/spinner"
+                android:gravity="center"
+                android:spinnerMode="dropdown"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/select_day"
+                android:textColor="@color/white_text"
+                android:textSize="20sp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/titillium_web_regular"/>
+
+            <Spinner
+                android:id="@+id/spn_days"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/spinner"
+                android:entries="@array/days"
+                android:gravity="center"
+                android:spinnerMode="dropdown"
+                android:textAlignment="center"/>
+
+            <Button
+                android:id="@+id/btn_add_timetable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:background="@drawable/button"
+                android:fontFamily="@font/titillium_web_regular"
+                android:text="@string/add_timetable"
+                android:textColor="@color/white_text"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

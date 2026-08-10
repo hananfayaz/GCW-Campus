@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.AddFacultyActivity">
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/image_description"
+        android:scaleType="fitXY"
+        android:src="@drawable/faculty_upper_vector"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/titillium_web_bold"
+        android:text="@string/add_faculty"
+        android:textColor="@color/white_text"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.35" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:fontFamily="@font/titillium_web_regular"
+        android:textColor="@color/black_text"
+        android:text="@string/select_department"
+        app:layout_constraintEnd_toEndOf="@+id/imageView7"
+        app:layout_constraintStart_toStartOf="@+id/imageView7"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+
+    <Spinner
+        android:id="@+id/spn_faculty_dep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/spinner"
+        android:entries="@array/departments"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/titillium_web_regular"
+        android:text="@string/select_semester"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black_text"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/spn_faculty_dep"
+        app:layout_constraintStart_toStartOf="@+id/spn_faculty_dep"
+        app:layout_constraintTop_toBottomOf="@+id/spn_faculty_dep" />
+
+    <Spinner
+        android:id="@+id/spn_faculty_sem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/spinner"
+        android:entries="@array/semesters"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/spn_faculty_dep"
+        app:layout_constraintStart_toStartOf="@+id/spn_faculty_dep"
+        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_faculty_name"
+        app:layout_constraintEnd_toEndOf="@+id/spn_faculty_sem"
+        android:textSize="16sp"
+        android:fontFamily="@font/titillium_web_regular"
+        android:textColor="@color/black_text"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/spn_faculty_sem"
+        app:layout_constraintTop_toBottomOf="@+id/spn_faculty_sem" />
+
+    <EditText
+        android:id="@+id/faculty_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="name"
+        android:background="@drawable/edit_text"
+        android:hint="@string/enter_faculty_name"
+        android:inputType="textCapSentences|textPersonName"
+        android:paddingStart="10dp"
+        android:layout_marginTop="10dp"
+        android:paddingEnd="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/spn_faculty_sem"
+        app:layout_constraintStart_toStartOf="@+id/spn_faculty_sem"
+        app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+    <Button
+        android:id="@+id/btn_add_faculty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:text="@string/submit_btn_txt"
+        android:textColor="@color/white_text"
+        android:textSize="20sp"
+        android:fontFamily="@font/titillium_web_regular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/faculty_name"
+        app:layout_constraintStart_toStartOf="@+id/faculty_name"
+        app:layout_constraintTop_toBottomOf="@+id/faculty_name" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
