@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "235902181419",
+    "project_id": "gcw-campus",
+    "storage_bucket": "gcw-campus.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:235902181419:android:850b99d9b8afb777734a6e",
+        "android_client_info": {
+          "package_name": "com.example.gcwcampus"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaqNBljm1GQfGUPfck7-ZLj_5BjTFA-Qw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
